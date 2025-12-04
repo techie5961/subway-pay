@@ -1,0 +1,11 @@
+  if(this.files[0]){
+                    
+                   this.closest(".cont").querySelector("img").src=window.URL.createObjectURL(this.files[0]);
+                     this.closest(".cont").querySelector("img").classList.remove("display-none");
+                     this.closest(".cont").querySelector(".summary").classList.add("display-none");
+                   
+                    }else{
+                    this.closest(".cont").querySelector("img").src="";
+                     this.closest(".cont").querySelector("img").classList.add("display-none");
+                     this.closest(".cont").querySelector(".summary").classList.remove("display-none");
+                    }

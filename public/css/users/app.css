@@ -1,0 +1,128 @@
+body{
+    background:var(--bg);
+    color:var(--text);
+    
+}
+main{
+    padding:10px;
+}
+header{
+    position:sticky;
+    top:0;
+    left:0;
+   right:0;
+   display:flex;
+   flex-direction:row;
+   align-items:center;
+   justify-content:space-between;
+   padding:10px;
+   gap:10px;
+   background: inherit;
+   z-index:var(--z-index-low);
+}
+.photo{
+    height:50px;
+    width:50px;
+   
+    background-size:cover;
+    background-position:center;
+    border-radius:50%;
+
+}
+.logo{
+    height:40px;
+}
+
+.svg.credit{
+    background:rgba(0,255,0,0.2);
+    color:#4caf50;
+    aspect-ratio:1;
+    height:30px;
+    width:30px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+}
+.svg.debit{
+    background:rgba(255,0,0,0.2);
+    color:red;
+    aspect-ratio:1;
+    height:30px;
+    width:30px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+}
+.svg.credit svg,.svg.debit svg{
+   fill:currentColor;
+   height:20px;
+   width:20px;
+ 
+}
+.cont{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    height:50px;
+    background:var(--bg-light);
+      border-radius:10px;
+      font-weight:bold;
+      color:white;
+     
+      position:relative;
+}
+.cont:hover{
+    border:1px solid #708090;
+    /* box-shadow: 0 0 0 4px rgba(100,255,100,0.1); */
+}
+.cont .inp{
+    width:100%;
+    background:transparent;
+    border:none;
+    height:100%;
+    font-weight:bold;
+    color:white;
+    caret-color:white;
+
+}
+.cont .inp::placeholder{
+    font-weight: bold;
+}
+.btn{
+    background:linear-gradient(to right,#ffd700,var(--primary))
+}
+ .prompt{
+   position:absolute;
+   top:100%;
+   left:50%;
+   transform:translateX(-50%);
+   background:var(--primary);
+   z-index:var(--z-index-low);
+   color:black;
+   padding:5px 10px;
+   font-size:0.5rem;
+   border-radius:4px;
+   display:none;
+ }
+ .prompt::before{
+   content:'';
+   position:absolute;
+   bottom:100%;
+   border-left:4px solid transparent;
+   border-right:4px solid transparent;
+   border-bottom:4px solid var(--primary);
+ }
+
+@media(min-width:800px){
+    header,footer{
+        padding:10px 10vw;
+    }
+    main{
+        padding: 10px 15vw;
+    }
+}

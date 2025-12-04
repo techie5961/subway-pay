@@ -1,0 +1,132 @@
+  @extends('layout.users.app')
+@section('title')
+    Nairapay
+@endsection
+@section('css')
+    <style>
+       body{
+        overflow: hidden;
+        color:rgb(5, 5, 129);
+       } 
+       .border-bottom-1{
+        border-bottom:0.1px solid silver;
+       }
+      .cont{
+        border:0.1px solid gold;
+        border-radius:0;
+      }
+      input.inp{
+         color:rgb(5, 5, 129) !important;
+      }
+      .btn{
+        margin-top:20px;
+      }
+       .prompt{
+        background:black;
+        color:white;
+
+       }
+       .prompt::before{
+        border-bottom-color: black
+       }
+    </style>
+@endsection
+@section('main')
+    <section class="section align-center column w-full g-5 pos-fixed average bg-white">
+        <div class="row pc-x-padding w-full"> <strong class="desc m-10 c-black no-select">Pay With Transfer</strong></div>
+        <div class="row w-full pc-x-padding p-10 space-between">
+            <div class="column">
+               
+                <img width="100" src="{{ asset('images/nairapay.png') }}" alt="">
+            </div>
+            <div class="column">
+                <span class="text-small">{{ Auth::guard('users')->user()->email }}</span>
+                <strong class="m-left-auto">&#8358;{{ number_format($amount,2) }}</strong>
+            </div>
+
+        </div>
+        <div class="h-2 bg-gold w-full"></div>
+      <div class="column w-full p-20 flex-auto justify-center column g-10">
+        <div class="bg-whitesmoke p-y-50 details g-10 align-center text-center max-w-500 w-fit p-10 column">
+        <span>Please Proceed to transfer the <strong class="c-red">exact amount</strong> below:</span>
+        <div class="row border-bottom-1 space-between w-full align-center">
+            <span>Amount</span>
+           <div class="row align-center">
+             <strong>&#8358;{{ number_format($amount,2) }}</strong>
+             <svg class="pc-pointer" onclick="copy('{{ $amount }}')" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#14005c" viewBox="0 0 256 256"><path d="M184,72V216H40V72Z" opacity="0.2"></path><path d="M184,64H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H184a8,8,0,0,0,8-8V72A8,8,0,0,0,184,64Zm-8,144H48V80H176ZM224,40V184a8,8,0,0,1-16,0V48H72a8,8,0,0,1,0-16H216A8,8,0,0,1,224,40Z"></path></svg>
+          
+           </div>
+        </div>
+         <div class="row border-bottom-1 space-between w-full align-center">
+            <span>Account Number</span>
+            <div class="row align-center"><strong>{{ $bank_details->account_number }}</strong>
+            <svg class="pc-pointer" onclick="copy('{{ $bank_details->account_number }}')" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#14005c" viewBox="0 0 256 256"><path d="M184,72V216H40V72Z" opacity="0.2"></path><path d="M184,64H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H184a8,8,0,0,0,8-8V72A8,8,0,0,0,184,64Zm-8,144H48V80H176ZM224,40V184a8,8,0,0,1-16,0V48H72a8,8,0,0,1,0-16H216A8,8,0,0,1,224,40Z"></path></svg>
+            </div>
+        </div>
+        <div class="row border-bottom-1 space-between w-full align-center">
+            <span>Bank</span>
+            <strong>{{ $bank_details->bank }}</strong>
+        </div>
+         <div class="row border-bottom-1 space-between w-full align-center">
+            <span>Account Name</span>
+            <strong>{{ $bank_details->account_name }}</strong>
+        </div>
+      </div>
+      <div class="bg-whitesmoke p-y-50 complete display-none g-10 w-full align-center text-center max-w-500 w-fit p-10 column">
+       
+        <span class="text-light no-select">Fill the form below with the correct details to complete your deposit</span>
+        <form method="POST" onsubmit="PostRequest(event,this,MyFunc.Submitted)" action="{{ url('users/post/complete/nairapay/deposit/process') }}" class="form w-full column g-10">
+          <input type="hidden" name="amount" value="{{ $amount }}" class="input">
+          <input type="hidden" name="_token" class="input" value="{{ csrf_token() }}">
+            <div class="cont required">
+                <input type="text" name="account_name" placeholder="Name on account sent from" class="inp input">
+                @include('components.sections',[
+                    'required' => 'true'
+                ])
+            </div>
+             <div class="cont required">
+                <input name="bank_name" type="text" placeholder="Name of bank sent from" class="inp input">
+                @include('components.sections',[
+                    'required' => 'true'
+                ])
+            </div>
+            <button class="btn">Complete Deposit</button>
+        </form>
+      </div>
+      <span class="text-light no-select max-500 text-center">
+        <span class="c-red">Note:</span>
+        <span>Send the exact amount and double check the account before sending.If you encounter any issues,contact support.</span>
+      </span>
+      <div onclick="MyFunc.Paid(this)" class="p-10 no-select p-x-20 bold pointer border-1">I have made the transfer</div>
+      <div onclick="window.location.href='{{ url('users/dashboard') }}'" class="p-10 no-select c-red p-x-20 bold pointer border-1">Cancel Payment</div>
+      </div>
+    </section>
+@endsection
+@section('js')
+  <script class="js">
+    MyFunc = {
+        Paid : function(element){
+            document.querySelector('.bg-whitesmoke.details').classList.add('display-none');
+            document.querySelector('.bg-whitesmoke.complete').classList.remove('display-none');
+            element.onclick=function(){
+                MyFunc.Back(element)
+            }
+            element.innerHTML='Show Deposit details';
+        },
+        Back : function(element){
+             document.querySelector('.bg-whitesmoke.details').classList.remove('display-none');
+            document.querySelector('.bg-whitesmoke.complete').classList.add('display-none');
+            element.onclick=function(){
+                MyFunc.Paid(element)
+            }
+             element.innerHTML='I have made the transfer';
+        },
+        Submitted : function(response,event){
+            let data=JSON.parse(response);
+            if(data.status == 'success'){
+                window.location.href=data.url;
+            }
+        }
+    }
+  </script>
+@endsection

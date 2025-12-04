@@ -1,0 +1,393 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('Poppins/Poppins-Regular.ttf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('Poppins/Poppins-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('Poppins/Poppins-ExtraLight.ttf');
+    font-weight:100;
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('Poppins/Poppins-BoldItalic.ttf');
+    font-weight:900;
+    font-style:italic;
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('Poppins/Poppins-Italic.ttf');
+    font-weight:normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('Poppins/Poppins-ExtraLightItalic.ttf');
+    font-style: italic;
+    font-weight:100;
+}
+@font-face {
+    font-family: 'alfa slab';
+    src: url('Alfa_Slab_One/AlfaSlabOne-Regular.ttf');
+}
+@font-face {
+    font-family: 'anton';
+    src: url('Anton/Anton-Regular.ttf');
+}
+@font-face {
+    font-family: 'achivo black';
+    src: url('Archivo_Black/ArchivoBlack-Regular.ttf');
+}
+@font-face {
+    font-family: 'dancing script';
+    src: url('Dancing_Script/DancingScript-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'pacifico';
+    src: url('Pacifico/Pacifico-Regular.ttf');
+}
+@font-face {
+    font-family: 'cinzel decorative';
+    src: url('Cinzel_Decorative/CinzelDecorative-Regular.ttf');
+    font-weight:normal;
+
+
+}
+@font-face {
+    font-family: 'cinzel decorative';
+    src: url('Cinzel_Decorative/CinzelDecorative-Bold.ttf');
+    font-weight:bold;
+
+
+}
+@font-face {
+    font-family: 'ryal';
+    src: url('Ryal/a-ryal-black-block.ttf');
+}
+@font-face {
+    font-family: 'plaster';
+    src: url('Plaster/Plaster-Regular.ttf');
+}
+@font-face {
+    font-family: 'reem kufi ink';
+    src: url('Reem_Kufi_Ink/ReemKufiInk-Regular.ttf');
+}
+@font-face {
+    font-family: 'libertinus sans';
+    src: url('Libertinus_Sans/LibertinusSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'libertinus sans';
+    src: url('Libertinus_Sans/LibertinusSans-Bold.ttf');
+    font-weight:bold;
+}
+@font-face {
+    font-family: 'libertinus sans';
+    src: url('Libertinus_Sans/LibertinusSans-Italic.ttf');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'teachers';
+    src: url('Teachers/Teachers-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-Regular.ttf');
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-Light.ttf');
+    font-weight:300;
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-ExtraLight.ttf');
+    font-weight:100;
+}
+@font-face {
+    font-family: 'manrope';
+    src: url('Manrope/static/Manrope-Regular.ttf');
+    font-weight:400;
+}
+@font-face {
+    font-family: 'manrope';
+    src: url('Manrope/static/Manrope-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'manrope';
+    src: url('Manrope/static/Manrope-ExtraBold.ttf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'manrope';
+    src: url('Manrope/static/Manrope-ExtraLight.ttf');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'manrope';
+    src: url('Manrope/static/Manrope-Light.ttf');
+    font-weight:300;
+}
+@font-face {
+    font-family: 'manrope';
+    src: url('Manrope/static/Manrope-Medium.ttf');
+    font-weight:500;
+}
+@font-face {
+    font-family: 'manrope';
+    src: url('Manrope/static/Manrope-SemiBold.ttf');
+    font-weight:600;
+}
+@font-face {
+    font-family: 'quicksand';
+    src: url('Quicksand/static/Quicksand-Bold.ttf');
+    font-weight:700 ;
+}
+@font-face {
+    font-family: 'quicksand';
+    src: url('Quicksand/static/Quicksand-Light.ttf');
+    font-weight:300;
+}
+@font-face {
+    font-family: 'quicksand';
+    src: url('Quicksand/static/Quicksand-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'quicksand';
+    src: url('Quicksand/static/Quicksand-Regular.ttf');
+    font-weight:400;
+}
+@font-face {
+    font-family: 'quicksand';
+    src: url('Quicksand/static/Quicksand-SemiBold.ttf');
+    font-weight:600;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-Black.ttf');
+    font-weight:900;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-BlackItalic.ttf');
+    font-weight:900;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-BoldItalic.ttf');
+    font-weight:700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-ExtraBold.ttf');
+    font-weight:800;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-ExtraBoldItalic.ttf');
+    font-weight:800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-ExtraLight.ttf');
+    font-weight:200;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-ExtraLightItalic.ttf');
+    font-weight:200;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-Italic.ttf');
+    font-weight:400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-Light.ttf');
+    font-weight:300;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-LightItalic.ttf');
+    font-weight:300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-Medium.ttf');
+    font-weight:500;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-MediumItalic.ttf');
+    font-weight:500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-Regular.ttf');
+    font-weight:400;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-SemiBold.ttf');
+    font-weight:600;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-SemiBoldItalic.ttf');
+    font-weight:600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-Thin.ttf');
+    font-weight:100;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-ThinItalic.ttf');
+    font-weight:100;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Black.ttf');
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-BlackItalic.ttf');
+    font-weight: 900;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-BoldItalic.ttf');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-ExtraBold.ttf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-ExtraBoldItalic.ttf');
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-ExtraLight.ttf');
+    font-weight:200;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-ExtraLightItalic.ttf');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Italic.ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Light.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-LightItalic.ttf');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-MediumItalic.ttf');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Regular.ttf');
+    font-weight: 400;
+
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-SemiBold.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-SemiBoldItalic.ttf');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Thin.ttf');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-ThinItalic.ttf');
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'bowl';
+    src: url('BowlByOneSC/BowlbyOneSC-Regular.ttf');
+}
+@font-face {
+    font-family: 'titan one';
+    src: url('titan_one/TitanOne-Regular.ttf');
+}
+@font-face {
+    font-family: 'luckiest guy';
+    src: url('luckiest_guy/LuckiestGuy-Regular.ttf');
+}
