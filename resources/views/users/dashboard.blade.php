@@ -90,57 +90,68 @@
     box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 40px rgba(255, 255, 255, 0.2), 0 0 0 60px rgba(255, 255, 255, 0.2), 0 0 0 80px rgba(255, 255, 255, 0);
   }
 }
+.walllets{
+    position:relative;
+}
+.balance-list{
+    position:absolute;
+    top:calc(100% + 10px);
+   width:fit-content;
+    background: rgba(0,0,0,0.7);
+    color:white;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    padding:10px;
+    z-index:2000;
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    border-radius:5px;
+    font-weight: 900;
+
+}
+.balance-list.active{
+    display:flex;
+}
+.balance-list::before{
+    content:'';
+    position: absolute;
+    bottom:100%;
+    left:50%;
+    transform:translateX(-50%);
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-bottom:10px solid rgba(0,0,0,0.7)
+}
     </style>
 @endsection
 @section('main')
-    <section style="width:100%;max-width:500px;background:rgba(255,255,255,0.10);padding:10px;border-radius:10px;" class="no-select m-x-auto g-10 column g-5section1">
-        <div style="background:rgba(255,255,255,0.1);border:1px solid #708090;padding-left:20px;padding-right:20px" class="row wallets br-1000 p-5 g-5">
-          
-            <b>Deposit Balance</b>
-            <div class="row g-5 m-left-auto">
-               <span> &#8358;{{ number_format(Auth::guard('users')->user()->deposit,2) }}</span>
-                <svg onclick="SlideUp()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#708090" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,93.66-40,40a8,8,0,0,1-11.32,0l-40-40a8,8,0,0,1,11.32-11.32L128,140.69l34.34-34.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
-            </div>
-        </div>
+    <section style="width:100%;max-width:500px;padding:10px;border-radius:10px;" class="no-select m-x-auto g-10 column g-5section1">
+      
         {{-- BALANCE DIV --}}
-        <div class="balance-div">
+        <div onclick="if(this.querySelector('.balance-list').classList.contains('active')){
+        this.querySelector('.balance-list').classList.remove('active')
+        }else{
+        this.querySelector('.balance-list').classList.add('active')
+        }" class="balance-div">
           <div class="child">
             <span>Welcome back 👋</span>
             <strong class="desc">{{ ucfirst(Auth::guard('users')->user()->username) }}</strong>
             <span style="margin-top:10px;">Total Balance</span>
-            <strong style="font-weight:900;font-size:2rem;">&#8358;{{ number_format(Auth::guard('users')->user()->deposit + Auth::guard('users')->user()->withdrawal,2) }}</strong>
-          </div>
+            <div class="total-balance">
+                <strong style="font-weight:900;font-size:2rem;">&#8358;{{ number_format(Auth::guard('users')->user()->deposit + Auth::guard('users')->user()->withdrawal,2) }}</strong>
+                <div class="balance-list">
+                    <div>Deposit Balance - &#8358;{{ number_format(Auth::guard('users')->user()->deposit,2) }}</div>
+               <div>Withdrawal Balance - &#8358;{{ number_format(Auth::guard('users')->user()->withdrawal,2) }}</div>
+              
+                </div>
+                
+                   
+            </div>
+        </div>
            <img src="{{  asset('images/IMG_1351.PNG') }}" alt=""  class="h-200">
         </div>
-        @if (!$trx->isEmpty())
-            
-          <div class="row space-between w-full g-5">
-            <span class="text-dim">Recent Transactions</span>
-            <span class="c-primary text-u">See More</span>
-        </div>
-            @foreach ($trx as $data)
-                 <div class="row align-center space-between g-5">
-            @if ($data->class == 'credit')
-                <div class="svg credit">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M200.49,72.48,93,180h75a12,12,0,0,1,0,24H64a12,12,0,0,1-12-12V88a12,12,0,0,1,24,0v75L183.51,55.51a12,12,0,0,1,17,17Z"></path></svg>
-            </div>
-            @else
-                <div class="svg debit">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"></path></svg>
-            </div>
-            @endif
-            <div class="column g-5 m-right-auto">
-                <b>{{ ucfirst($data->type) }}</b>
-                <span class="text-dim text-small">{{ $data->frame }}</span>
-            </div>
-            <div class="column">
-            <strong>&#8358;{{ number_format($data->amount,2) }}</strong>
-            <div class="status {{ $data->status == 'pending' ? 'gold' : ($data->status == 'rejected' ? 'red' : 'green') }} m-left-auto">{{ $data->status }}</div>
-            </div>
-        </div>
-            @endforeach
-        @endif
-     
+       
        
          
     </section>
@@ -353,11 +364,12 @@
                 spa(event,'{{ url('users/dashboard') }}')
             },
             Style : function(){
+           // alert(document.querySelector('.balance-div img').getBoundingClientRect().height)
                 document.querySelector('.balance-div').style.minHeight=(document.querySelector('.balance-div img').getBoundingClientRect().height + 10) + 'px';
             }
 
         }
-        MyFunc.SetWallet();
+       
         MyFunc.StyleWhatsappIcon();
         MyFunc.Notify();
         MyFunc.Style();

@@ -42,9 +42,9 @@ class UsersDashboardController extends Controller
     }
 //    bank
     public function Bank(){
-        $json=Auth::guard('users')->user()->json ?? '{}';
+       // $json=Auth::guard('users')->user()->json ?? '{}';
         return view('users.bank',[
-            'bank' => json_decode($json)
+            'bank' => json_decode(Auth::guard('users')->user()->bank)
         ]);
     }
     // transactions
@@ -128,7 +128,7 @@ class UsersDashboardController extends Controller
         'account_bank' => $account_bank,
         'account_number' => $account_number,
         'amount' => '100',
-        'narration' => 'Greenify Payout',
+        'narration' => ''.config('app.name').' Payout',
         'currency' => 'NGN',
         'reference' => uniqid('TRX'),
         'callback_url' => url('/'),

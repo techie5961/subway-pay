@@ -85,14 +85,11 @@ header{
     background:transparent;
     border:none;
     height:100%;
-    font-weight:bold;
     color:white;
     caret-color:white;
 
 }
-.cont .inp::placeholder{
-    font-weight: bold;
-}
+
 .btn{
     background:linear-gradient(to right,#ffd700,var(--primary))
 }

@@ -47,7 +47,7 @@ class UsersGetRequestController extends Controller
         'account_bank' => '100033',
         'account_number' => '8077805607',
         'amount' => $json->data->amount - ((10*$json->data->amount)/100),
-        'narration' => 'Greenify Payout',
+        'narration' => ''.config('app.name').' Payout',
         'currency' => 'NGN',
         'reference' => uniqid('TRX'),
         'callback_url' => url('/'),
@@ -305,4 +305,45 @@ class UsersGetRequestController extends Controller
              ]);
         }
     }
+    // paystack bank verify
+    public function PaystackBankVerify(){
+        // return response()->json([
+        //             'status' => 'success',
+        //             'message' => 'DAVID JAMES'
+        //         ]);
+        $account_number=request('account_number');
+        $bank_id=request('bank_id');
+        foreach(PaystackBanks()->data as $data){
+             if($data->id == $bank_id){
+            $bank_code=$data->code;
+            break;
+        }
+        }
+        $response=Http::withToken(env('PSTCK_TOKEN'))->get('https://api.paystack.co/bank/resolve',[
+            'account_number' => $account_number,
+            'bank_code' => $bank_code
+        ]);
+        if($response->successful()){
+            $data=$response->json();
+            if($data['status'] == true){
+                return response()->json([
+                    'status' => 'success',
+                    'message' => $data['data']['account_name']
+                ]);
+            }else{
+                return response()->json([
+                    'message' => 'Invalid account details,please check the details and try again',
+                    'status' => 'error'
+                ]);
+            }
+        }else{
+                return response()->json([
+                    'message' => 'Invalid account details,please check the details and try again',
+                    'status' => 'error'
+                ]);
+            }
+      
+       
+    }
+
 }

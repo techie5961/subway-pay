@@ -46,7 +46,7 @@ class UsersPostRequestController extends Controller
             'date' => Carbon::now(),
             'updated' => Carbon::now(),
             'photo' => 'avatar.svg',
-            'ref' => DB::table('users')->where('uniqid',request()->input('ref'))->first()->username
+            'ref' => request('ref') == '' ? '' : DB::table('users')->where('uniqid',request()->input('ref'))->first()->username
         ]);
         DB::table('notifications')->insert([
             'user_id' => DB::table('users')->where('username',$username)->first()->id,
@@ -105,12 +105,59 @@ class UsersPostRequestController extends Controller
     }
     // add bank
     public function AddBank(){
-        $account_number=DB::getPdo()->quote(request()->input('account_number'));
-        $account_name=DB::getPdo()->quote(request()->input('account_name'));
-        $bank_key=DB::getPdo()->quote(request()->input('bank_key'));
-        DB::table('users')->where('id',Auth::guard('users')->user()->id)->update([
-            'json' => DB::raw("JSON_SET(COALESCE(json,'{}'),'$.account_number',$account_number,'$.account_name',$account_name,'$.bank_key',$bank_key)"),
-            'updated' => Carbon::now()
+        $account_number=request('account_number');
+        $account_name=request('account_name');
+        $bank_key=request('bank_key');
+        // return response()->json([
+        //     'status' => 'error',
+        //     'message' => $bank_key
+        // ]);
+     
+        foreach(PaystackBanks()->data as $data){
+            if($data->id == $bank_key){
+                $bank_code=$data->code;
+                $bank_name=$data->name;
+               break;
+            }
+        }
+        if(config('settings.withdrawal') == 'auto'){
+            $response=Http::withToken(env('PSTCK_SECRET_KEY'))->post('https://api.paystack.co/transferrecipient',[
+                'type' => 'nuban',
+                'name' => Auth::guard('users')->user()->name,
+                'account_number' => $account_number,
+                'bank_code' => $bank_code,
+                'currency' => 'NGN' 
+            ]);
+            if($response->successful()){
+            $data=$response()->json();
+            if($data['status'] == true){
+                DB::table('users')->where('id',Auth::guard('users')->user()->id)->update([
+                    'recipient' => json_encode($data)
+                ]);
+
+            }else{
+                return response()->json([
+                    'message' => 'An unknown error occured please try again',
+                    'status' => 'error'
+                ]);
+            }
+            }else{
+                return response()->json([
+                    'message' => 'An unknown error occured please try again',
+                    'status' => 'error'
+                ]);
+            }
+
+        }
+
+      DB::table('users')->where('id',Auth::guard('users')->user()->id)->update([
+        'bank' => json_encode([
+            'account_number' => $account_number,
+            'account_name' => $account_name,
+            'bank_id' => $bank_key,
+            'bank_code' => $bank_code,
+            'bank_name' => $bank_name
+        ])
         ]);
          DB::table('notifications')->insert([
             'user_id' => Auth::guard('users')->user()->id,

@@ -5,22 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- SEO Meta -->
-    <title>Greenify | Smart Investment Packages for Daily Passive Income</title>
-    <meta name="description" content="Greenify lets you invest in reliable packages and earn daily profits. Withdraw anytime. Transparent. Flexible. Profitable. Join thousands building daily income.">
-    <meta name="keywords" content="Greenify, investment, daily profit, earn online, financial freedom, investment platform, passive income, earn daily, flexible withdrawal">
+    <title>{{ config('app.name') }} | Smart Investment Packages for Daily Passive Income</title>
+    <meta name="description" content="{{ config('app.name') }} lets you invest in reliable packages and earn daily profits. Withdraw anytime. Transparent. Flexible. Profitable. Join thousands building daily income.">
+    <meta name="keywords" content="{{ config('app.name') }}, investment, daily profit, earn online, financial freedom, investment platform, passive income, earn daily, flexible withdrawal">
     <meta name="author" content="Techie Innovations">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Greenify - Invest in Smart Packages & Earn Daily">
-    <meta property="og:description" content="Start investing today with Greenify and enjoy daily returns. Secure, flexible, and easy withdrawals.">
+    <meta property="og:title" content="{{ config('app.name') }} - Invest in Smart Packages & Earn Daily">
+    <meta property="og:description" content="Start investing today with {{ config('app.name') }} and enjoy daily returns. Secure, flexible, and easy withdrawals.">
     <meta property="og:image" content="{{ asset('images/logo.png?v='.config('versions.vite_version').'') }}"> <!-- Update with actual image -->
     <meta property="og:url" content="{{ url() }}">
     <meta property="og:type" content="website">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Greenify - Smart Daily Investments">
-    <meta name="twitter:description" content="Invest in Greenify and get daily earnings. Simple, secure and profitable.">
+    <meta name="twitter:title" content="{{ config('app.name') }} - Smart Daily Investments">
+    <meta name="twitter:description" content="Invest in {{ config('app.name') }} and get daily earnings. Simple, secure and profitable.">
     <meta name="twitter:image" content="{{ asset('images/logo.png?v='.config('versions.vite_version').'') }}"> <!-- Update -->
 
     <!-- Favicons -->

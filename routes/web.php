@@ -109,6 +109,9 @@ Route::prefix('users')->group(function(){
     Route::get('deposit/checkout',[
         UsersDashboardController::class,"DepositPay"
     ]);
+    Route::get('get/paystack/bank/auto/verify',[
+        UsersGetRequestController::class,'PaystackBankVerify'
+    ]);
     
 
 
