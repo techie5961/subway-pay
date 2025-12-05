@@ -45,7 +45,7 @@ class UsersPostRequestController extends Controller
             'status' => 'active',
             'date' => Carbon::now(),
             'updated' => Carbon::now(),
-            'photo' => 'avatar.svg',
+            'photo' => 'avatar.jpg',
             'ref' => request('ref') == '' ? '' : DB::table('users')->where('uniqid',request()->input('ref'))->first()->username
         ]);
         DB::table('notifications')->insert([
@@ -129,7 +129,7 @@ class UsersPostRequestController extends Controller
                 'currency' => 'NGN' 
             ]);
             if($response->successful()){
-            $data=$response()->json();
+            $data=$response->json();
             if($data['status'] == true){
                 DB::table('users')->where('id',Auth::guard('users')->user()->id)->update([
                     'recipient' => json_encode($data)

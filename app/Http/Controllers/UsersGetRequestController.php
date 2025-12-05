@@ -137,7 +137,7 @@ class UsersGetRequestController extends Controller
             'type' => 'withdrawal',
             'class' => 'debit',
             'amount' => $amount,
-            'json' => Auth::guard('users')->user()->json,
+            'json' => Auth::guard('users')->user()->bank,
             'status' => 'pending',
             'updated' => Carbon::now(),
             'date' => Carbon::now()
@@ -319,10 +319,11 @@ class UsersGetRequestController extends Controller
             break;
         }
         }
-        $response=Http::withToken(env('PSTCK_TOKEN'))->get('https://api.paystack.co/bank/resolve',[
+        $response=Http::withToken(env('PSTCK_SECRET_KEY'))->get('https://api.paystack.co/bank/resolve',[
             'account_number' => $account_number,
             'bank_code' => $bank_code
         ]);
+       // return $response->json();
         if($response->successful()){
             $data=$response->json();
             if($data['status'] == true){

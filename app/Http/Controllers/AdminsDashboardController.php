@@ -251,6 +251,7 @@ class AdminsDashboardController extends Controller
            $user->total_second_level_earnings=DB::table('transactions')->where('user_id',$user->id)->where('type','commission')->where('json->level','second')->sum('amount');
            
            $user->json=json_decode($user->json ?? '{}');
+           $user->bank=json_decode($user->bank);
            return view('admins.user',[
         'user' => $user
       ]);

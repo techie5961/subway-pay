@@ -70,7 +70,7 @@
                     </div>
                      <div class="row w-full g-10">
                         <strong class="c-primary">Bank Details:</strong>
-                        <b>{{ $user->json->account_number ?? 'null' }} / {{ Banks()->{$user->json->bank_key  ?? '' }->name ?? 'null' }} / {{ $user->json->account_name ?? 'null' }}</b>
+                        <b>{{ $user->bank->account_number ?? 'null' }} / {{ $user->bank->bank_name ?? 'null' }} / {{ $user->bank->account_name ?? 'null' }}</b>
                     </div>
                        <div class="row w-full g-10">
                         <strong class="c-primary">Total Referred:</strong>

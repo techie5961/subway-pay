@@ -33,15 +33,20 @@ class UsersDashboardController extends Controller
     }
        // withdraw
     public function Withdraw(){
-        $json=Auth::guard('users')->user()->json ?? '{}';
-        $bank=json_decode($json);
-        if(empty($bank->account_number) || empty($bank->bank_key) || empty($bank->account_name)){
+       
+        if(!isset(Auth::guard('users')->user()->bank)){
+         
             return redirect()->to('users/bank');
         }
-        return view('users.withdraw');
+         $settings=DB::table('settings')->where('key','finance_settings')->first()->json ?? '{}';
+        return view('users.withdraw',[
+            'bank' => json_decode(Auth::guard('users')->user()->bank),
+            'portal' => json_decode($settings)->withdrawal_status
+        ]);
     }
 //    bank
     public function Bank(){
+       
        // $json=Auth::guard('users')->user()->json ?? '{}';
         return view('users.bank',[
             'bank' => json_decode(Auth::guard('users')->user()->bank)

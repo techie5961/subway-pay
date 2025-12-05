@@ -25,17 +25,12 @@
     </style>
 @endsection
 @section('main')
-    <section id="x" class="pos-fixed top-0 left-0 right-0 bottom-0 column align-center bg average">
-       <div class="p-10 row pos-stick stick-top space-between bg w-full align-center">
-        <svg class="pc-pointer" onclick="spa(event,'{{ url()->previous() == request()->fullUrl() ? url()->to('users/dashboard') : url()->previous() }}')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 256 256"><path d="M228,128a12,12,0,0,1-12,12H69l51.52,51.51a12,12,0,0,1-17,17l-72-72a12,12,0,0,1,0-17l72-72a12,12,0,0,1,17,17L69,116H216A12,12,0,0,1,228,128Z"></path></svg>
-        <b>Deposit</b>
-         <svg onclick="spa(event,'{{ url()->to('users/dashboard') }}')" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 256 256"><path d="M224,120v96a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V120a15.87,15.87,0,0,1,4.69-11.32l80-80a16,16,0,0,1,22.62,0l80,80A15.87,15.87,0,0,1,224,120Z"></path></svg>
-
-       </div>
+    <section id="x" class=" column align-center bg average">
+      
        <div class="column flex-auto w-full overflow m-x-auto p-10 g-5">
+        <strong class="desc">Enter Deposit Amount</strong>
         {{-- <div class="bg-light br-10 p-10 top-20 w-full max-w-500 m-x-auto column g-5"> --}}
             <div style="border:1px solid var(--bg-lighter)" class="cont max-w-500 m-x-auto bg-light w-full br-0">
-             <b style="padding:10px 20px;background:transparent;border-right:0.1px solid rgba(255,255,255,0.1)" class="row h-full justify-center p-10">&#x20a6;</b>
                 <input oninput="
                 if(this.value >= {{ $auto[0]->price }}){
                  document.querySelector('.btn').classList.remove('disabled');

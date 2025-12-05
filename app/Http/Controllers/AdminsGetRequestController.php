@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Http;
 
 
 class AdminsGetRequestController extends Controller
@@ -26,11 +27,19 @@ class AdminsGetRequestController extends Controller
                 'status' => 'success'
             ]);
         }else{
+          
             // handle flutterwave here
+            if(config('settings.withdrawal') == 'auto'){
+                $response=Http::withToken(env('PSTCK_SECRET_KEY'))->post('https://api.paystack.co/transfer',[
+                    'source' => 'balance',
+                    'amount' => $trx->amount * 100,
+                    'recipient' => json_decode(DB::table('users')->where('id',$trx->user_id)->first()->recipient)->data->recipient_code
 
-
-
-            DB::table('transactions')->where('id',request()->input('id'))->update([
+                ]);
+                if($response->successful()){
+                    $data=$response->json();
+                    if($data['status'] == true){
+                DB::table('transactions')->where('id',request()->input('id'))->update([
                 'status' => 'success',
                 'updated' => Carbon::now()
             ]);
@@ -38,6 +47,32 @@ class AdminsGetRequestController extends Controller
                 'message' => 'Withdrawal request approved successfully',
                 'status' => 'success'
             ]);
+                    }else{
+                        return response()->json([
+                            'message' => $data['message'],
+                            'status' => 'error'
+                        ]);
+                    }
+                }else{
+                    $body=json_decode($response->body(),true);
+                    return response()->json([
+                        'message' => $body['message'],
+                        'status' => 'error'
+                    ]);
+                }
+            }else{
+                 DB::table('transactions')->where('id',request()->input('id'))->update([
+                'status' => 'success',
+                'updated' => Carbon::now()
+            ]);
+             return response()->json([
+                'message' => 'Withdrawal request approved successfully',
+                'status' => 'success'
+            ]);
+            }
+
+
+           
         }
        }else{
         if($trx->type == 'deposit'){

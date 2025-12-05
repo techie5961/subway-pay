@@ -96,7 +96,7 @@
                       <div class="grid grid-2 g-10 break-word">
                <div class="column w-full g-5">
                  <span class="u m-right-auto">Bank Name</span>
-                <b class="right-auto">{{ Banks()->{$data->json->bank_key}->name }}</b>
+                <b class="right-auto">{{ $data->json->bank_name }}</b>
                </div>
                 <div class="column w-full g-5">
                  <span class="u m-left-auto">Account Number</span>
