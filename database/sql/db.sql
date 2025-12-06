@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2025 at 06:17 PM
+-- Generation Time: Dec 06, 2025 at 07:36 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -209,7 +209,17 @@ INSERT INTO `notifications` (`id`, `user_id`, `message`, `status`, `updated`, `d
 (11, 2, '{\"user\":\"You just submitted a withdrawal request\",\"admin\":\"<a class=\\\"c-primary b\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?user_id=2\\\">@blaady05<\\/a> Just submitted a withdrawal request\"}', '{\"user\":\"unread\",\"admin\":\"unread\"}', '2025-12-04 16:05:52', '2025-12-04 16:05:52'),
 (12, 5, '{\"user\":\"Registration Success\",\"admin\":\"<a class=\\\"b c-primary\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?id=5\\\">@7654321`<\\/a> Just Registerd on the site\"}', '{\"user\":\"read\",\"admin\":\"unread\"}', '2025-12-04 19:18:36', '2025-12-04 19:18:36'),
 (13, 6, '{\"user\":\"Registration Success\",\"admin\":\"<a class=\\\"b c-primary\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?id=6\\\">@dave<\\/a> Just Registerd on the site\"}', '{\"user\":\"read\",\"admin\":\"unread\"}', '2025-12-04 19:19:25', '2025-12-04 19:19:25'),
-(14, 7, '{\"user\":\"Registration Success\",\"admin\":\"<a class=\\\"b c-primary\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?id=7\\\">@ertyuio;\'<\\/a> Just Registerd on the site\"}', '{\"user\":\"read\",\"admin\":\"unread\"}', '2025-12-04 19:27:36', '2025-12-04 19:27:36');
+(14, 7, '{\"user\":\"Registration Success\",\"admin\":\"<a class=\\\"b c-primary\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?id=7\\\">@ertyuio;\'<\\/a> Just Registerd on the site\"}', '{\"user\":\"read\",\"admin\":\"unread\"}', '2025-12-04 19:27:36', '2025-12-04 19:27:36'),
+(15, 2, '{\"user\":\"You just linked a bank account\",\"admin\":\"<a class=\\\"c-primary b\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?id=2\\\">@blaady05<\\/a> Just linked a bank account\"}', '{\"user\":\"unread\",\"admin\":\"unread\"}', '2025-12-05 19:31:21', '2025-12-05 19:31:21'),
+(16, 2, '{\"user\":\"You just linked a bank account\",\"admin\":\"<a class=\\\"c-primary b\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?id=2\\\">@blaady05<\\/a> Just linked a bank account\"}', '{\"user\":\"unread\",\"admin\":\"unread\"}', '2025-12-05 20:51:40', '2025-12-05 20:51:40'),
+(17, 2, '{\"user\":\"You just linked a bank account\",\"admin\":\"<a class=\\\"c-primary b\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?id=2\\\">@blaady05<\\/a> Just linked a bank account\"}', '{\"user\":\"unread\",\"admin\":\"unread\"}', '2025-12-05 20:57:58', '2025-12-05 20:57:58'),
+(18, 2, '{\"user\":\"You just linked a bank account\",\"admin\":\"<a class=\\\"c-primary b\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?id=2\\\">@blaady05<\\/a> Just linked a bank account\"}', '{\"user\":\"unread\",\"admin\":\"unread\"}', '2025-12-05 23:25:18', '2025-12-05 23:25:18'),
+(19, 2, '{\"user\":\"You just linked a bank account\",\"admin\":\"<a class=\\\"c-primary b\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?id=2\\\">@blaady05<\\/a> Just linked a bank account\"}', '{\"user\":\"unread\",\"admin\":\"unread\"}', '2025-12-05 23:36:31', '2025-12-05 23:36:31'),
+(20, 2, '{\"user\":\"You just linked a bank account\",\"admin\":\"<a class=\\\"c-primary b\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?id=2\\\">@blaady05<\\/a> Just linked a bank account\"}', '{\"user\":\"unread\",\"admin\":\"unread\"}', '2025-12-05 23:37:48', '2025-12-05 23:37:48'),
+(21, 2, '{\"user\":\"You just submitted a withdrawal request\",\"admin\":\"<a class=\\\"c-primary b\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?user_id=2\\\">@blaady05<\\/a> Just submitted a withdrawal request\"}', '{\"user\":\"unread\",\"admin\":\"unread\"}', '2025-12-06 00:40:34', '2025-12-06 00:40:34'),
+(22, 2, '{\"user\":\"You just submitted a withdrawal request\",\"admin\":\"<a class=\\\"c-primary b\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?user_id=2\\\">@blaady05<\\/a> Just submitted a withdrawal request\"}', '{\"user\":\"unread\",\"admin\":\"unread\"}', '2025-12-06 00:44:49', '2025-12-06 00:44:49'),
+(23, 2, '{\"user\":\"You just submitted a withdrawal request\",\"admin\":\"<a class=\\\"c-primary b\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?user_id=2\\\">@blaady05<\\/a> Just submitted a withdrawal request\"}', '{\"user\":\"unread\",\"admin\":\"unread\"}', '2025-12-06 00:53:19', '2025-12-06 00:53:19'),
+(24, 2, '{\"user\":\"You just purchased a product\",\"admin\":\"<a class=\\\"c-primary b\\\" href=\\\"http:\\/\\/localhost\\/subway-pay\\/public\\/admins\\/user?user_id=2\\\">@blaady05<\\/a> Just purchased a product\"}', '{\"user\":\"unread\",\"admin\":\"unread\"}', '2025-12-06 04:53:50', '2025-12-06 04:53:50');
 
 -- --------------------------------------------------------
 
@@ -273,7 +283,8 @@ CREATE TABLE `purchased` (
 --
 
 INSERT INTO `purchased` (`id`, `product_id`, `user_id`, `json`, `status`, `updated`, `date`) VALUES
-(1, 11, 2, '{\"id\":11,\"photo\":\"1764139013.jpg\",\"name\":\"GRVIP 7\",\"price\":3000,\"return\":27200,\"validity\":7,\"limit\":5,\"json\":null,\"status\":\"active\",\"date\":\"2025-11-26 09:06:20\",\"updated\":\"2025-11-26 09:06:20\"}', 'expired', '2025-12-04 01:24:37', '2025-11-26 17:06:44');
+(1, 11, 2, '{\"id\":11,\"photo\":\"1764139013.jpg\",\"name\":\"GRVIP 7\",\"price\":3000,\"return\":27200,\"validity\":7,\"limit\":5,\"json\":null,\"status\":\"active\",\"date\":\"2025-11-26 09:06:20\",\"updated\":\"2025-11-26 09:06:20\"}', 'expired', '2025-12-04 01:24:37', '2025-11-26 17:06:44'),
+(2, 11, 2, '{\"id\":11,\"photo\":\"1764139013.jpg\",\"name\":\"GRVIP 7\",\"price\":3000,\"return\":27200,\"validity\":7,\"limit\":5,\"json\":null,\"status\":\"active\",\"date\":\"2025-11-26 09:06:20\",\"updated\":\"2025-11-26 09:06:20\"}', 'active', '2025-12-06 04:53:50', '2025-12-06 04:53:50');
 
 -- --------------------------------------------------------
 
@@ -295,7 +306,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('FbU1x8T3cJUv9KK6WcdyKj1KyNmLeXFefTao40q1', NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiaXRtSkJXcW15b1NxVFlWY1o3SHJPOXhUQTNRNEpjYWRRVklWMFVXViI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NTA6Imh0dHA6Ly9sb2NhbGhvc3Qvc3Vid2F5LXBheS9wdWJsaWMvdXNlcnMvZGFzaGJvYXJkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MjoibG9naW5fdXNlcnNfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToyO30=', 1764844161);
+('fvk5kkeBIS4EjxzEm5lYnAeOgm61oLjOFBHv3zsF', NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiSGhVVmVDTGVqTXJPcXdYVTdjc2VnMzd6dXNiNHAyNTJZdWRFbnpBTSI7czo1MjoibG9naW5fdXNlcnNfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToyO3M6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjUwOiJodHRwOi8vbG9jYWxob3N0L3N1YndheS1wYXkvcHVibGljL3VzZXJzL2Rhc2hib2FyZCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1764963457),
+('ofpAvqXuoztUb8yebusH9tz3sUTVfMgIvfniNk4s', NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiMnYwUDJiMUY4V1QzdzY0bXk0d0t4emFRSEJPMW1hcEdLOWU3N2NZNiI7czo1MjoibG9naW5fdXNlcnNfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToyO3M6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjQ4OiJodHRwOi8vbG9jYWxob3N0L3N1YndheS1wYXkvcHVibGljL3VzZXJzL3Byb2ZpbGUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUzOiJsb2dpbl9hZG1pbnNfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1764966685);
 
 -- --------------------------------------------------------
 
@@ -318,7 +330,7 @@ CREATE TABLE `settings` (
 
 INSERT INTO `settings` (`id`, `key`, `value`, `json`, `status`, `date`) VALUES
 (1, 'FinanceSettings', NULL, '{\"MinWithdrawal\":\"100\",\"MinDeposit\":\"1000\",\"MaxWithdrawal\":\"100000\",\"MaxDeposit\":\"20000000\",\"WithdrawalFee\":\"7.5\",\"WithdrawalStatus\":\"closed\"}', 'active', '2025-07-11 20:19:35'),
-(2, 'finance_settings', NULL, '{\"min_withdrawal\":\"1000\",\"min_deposit\":\"3000\",\"max_withdrawal\":\"100000\",\"max_deposit\":\"1000000\",\"withdrawal_fee\":\"13\",\"withdrawal_status\":\"active\"}', 'active', '2025-11-26 15:49:11'),
+(2, 'finance_settings', NULL, '{\"min_withdrawal\":\"1000\",\"min_deposit\":\"3000\",\"max_withdrawal\":\"100000\",\"max_deposit\":\"1000000\",\"withdrawal_fee\":\"13\",\"withdrawal_status\":\"closed\"}', 'active', '2025-12-06 05:05:49'),
 (3, 'referral_settings', NULL, '{\"first_level\":\"17\",\"second_level\":\"3\",\"method\":\"infinite\"}', 'active', '2025-07-31 09:38:27'),
 (4, 'general_settings', NULL, '{\"signup_bonus\":\"200\",\"group_link\":\"https:\\/\\/chat.whatsapp.com\\/F9246pvLLC1Ept2x0g92ak?mode=ac_t\",\"popup_link\":\"https:\\/\\/t.me\\/+-w1njBfbD0JhYzdk\",\"popup_message\":\"\\ud83c\\udf3f Welcome to Greenify\\r\\n\\r\\nWe are excited to have you onboard!\\r\\n\\r\\nInvest Smart. Earn Daily.\\r\\n\\r\\nAt Greenify, we make investing simple and rewarding. Choose from our trusted packages\\/products, earn daily returns, and enjoy full control over your finances \\u2014 all from one powerful platform.\\r\\n\\r\\nWhether you\'re starting small or going big, your journey to steady income starts here.\\r\\n\\r\\n> \\ud83d\\udca1 Ready to grow your money the smart way?\\r\\n\\r\\nJoin our telegram community below \\u2b07\\ufe0f\",\"daily_check_in\":\"50\"}', 'active', '2025-07-31 09:38:40'),
 (5, 'bank_details', NULL, '{\"account_number\":\"8903717869\",\"bank_code\":\"999991\",\"account_name\":\"MICHEAL OMOSEHIN\"}', 'active', '2025-07-25 10:14:48');
@@ -347,15 +359,8 @@ CREATE TABLE `transactions` (
 --
 
 INSERT INTO `transactions` (`id`, `uniqid`, `user_id`, `type`, `class`, `amount`, `json`, `status`, `updated`, `date`) VALUES
-(1, 'TRX6925BC5463515', 2, 'deposit', 'credit', 5000, '{\"gateway\":\"manual\",\"account_name\":null,\"bank_name\":null}', 'pending', '2025-11-25 23:25:24', '2025-11-25 23:25:24'),
-(2, 'TRX6925DB3719E3D', 2, 'deposit', 'credit', 5000, '{\"gateway\":\"manual\",\"account_name\":\"David James\",\"bank_name\":\"techie bank\"}', 'rejected', '2025-11-26 15:41:27', '2025-11-26 01:37:11'),
-(3, 'TRX6925DC99802B3', 2, 'deposit', 'credit', 5000, '{\"gateway\":\"manual\",\"account_name\":\"David James\",\"bank_name\":\"techie bank\"}', 'success', '2025-11-26 15:40:34', '2025-11-26 01:43:05'),
-(4, 'TRX6926B13EE3FBE', 2, 'withdrawal', 'debit', 870, '{\"account_number\": \"5005016577\", \"account_name\": \"David James\", \"bank_key\": \"ecobank\"}', 'success', '2025-11-26 16:50:49', '2025-11-26 16:50:22'),
-(5, 'TRX6926B17DD01E7', 2, 'withdrawal', 'debit', 870, '{\"account_number\": \"5005016577\", \"account_name\": \"David James\", \"bank_key\": \"ecobank\"}', 'pending', '2025-11-26 16:51:25', '2025-11-26 16:51:25'),
-(6, 'TRX6926B514B9222', 2, 'purchase', 'debit', 3000, '{\"id\":11,\"photo\":\"1764139013.jpg\",\"name\":\"GRVIP 7\",\"price\":3000,\"return\":27200,\"validity\":7,\"limit\":5,\"json\":null,\"status\":\"active\",\"date\":\"2025-11-26 09:06:20\",\"updated\":\"2025-11-26 09:06:20\"}', 'success', '2025-11-26 17:06:44', '2025-11-26 17:06:44'),
-(7, 'TRX6926BBCB99A7D', 2, 'check in', 'credit', 50, NULL, 'success', '2025-11-26 17:35:23', '2025-11-26 17:35:23'),
-(8, 'TRX69306445E8104', 2, 'Daily Income', 'credit', 27200, '[{\"id\":11,\"photo\":\"1764139013.jpg\",\"name\":\"GRVIP 7\",\"price\":3000,\"return\":27200,\"validity\":7,\"limit\":5,\"json\":null,\"status\":\"active\",\"date\":\"2025-11-26 09:06:20\",\"updated\":\"2025-11-26 09:06:20\"}]', 'success', '2025-12-04 01:24:37', '2025-12-04 01:24:37'),
-(9, 'TRX693132D069618', 2, 'withdrawal', 'debit', 17400, '{\"account_number\": \"5005016577\", \"account_name\": \"David James\", \"bank_key\": \"ecobank\"}', 'pending', '2025-12-04 16:05:52', '2025-12-04 16:05:52');
+(12, 'TRX6932FFEF6E4E5', 2, 'withdrawal', 'debit', 1740, '{\"account_number\":\"5005016577\",\"account_name\":\"DAVID JAMES ABAKPA\",\"bank_id\":\"15\",\"bank_code\":\"068\",\"bank_name\":\"Standard Chartered Bank\"}', 'pending', '2025-12-06 00:53:19', '2025-12-06 00:53:19'),
+(13, 'TRX6933384E6CA06', 2, 'purchase', 'debit', 3000, '{\"id\":11,\"photo\":\"1764139013.jpg\",\"name\":\"GRVIP 7\",\"price\":3000,\"return\":27200,\"validity\":7,\"limit\":5,\"json\":null,\"status\":\"active\",\"date\":\"2025-11-26 09:06:20\",\"updated\":\"2025-11-26 09:06:20\"}', 'success', '2025-12-06 04:53:50', '2025-12-06 04:53:50');
 
 -- --------------------------------------------------------
 
@@ -375,6 +380,8 @@ CREATE TABLE `users` (
   `photo` varchar(255) DEFAULT NULL,
   `deposit` float DEFAULT 0 COMMENT 'deposit balance',
   `withdrawal` float NOT NULL DEFAULT 0 COMMENT 'withdrawal balance',
+  `recipient` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`recipient`)),
+  `bank` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`bank`)),
   `type` varchar(255) NOT NULL DEFAULT 'user',
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) NOT NULL,
@@ -391,14 +398,14 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `uniqid`, `name`, `email`, `username`, `mobile`, `ref`, `referral`, `photo`, `deposit`, `withdrawal`, `type`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `json`, `status`, `date`, `updated`) VALUES
-(1, 'USR-69247CD7C4695', 'David', 'abakpadavid05@gmail.com', 'techie', NULL, NULL, NULL, 'avatar.svg', 0, 200, 'user', NULL, '$2y$12$qJfMJo.iuZv9sm.60.jD9O64bGX7NKo6Jfu6w6HIxaYM.KFDCZqf6', NULL, NULL, NULL, NULL, 'active', '2025-11-25 00:42:16', '2025-11-25 00:42:16'),
-(2, 'USR-69254DB0942F6', 'David James', 'techie5961@gmail.com', 'blaady05', 9013350351, NULL, NULL, 'avatar.svg', 2100, 8450, 'user', NULL, '$2y$12$lwx1dV6wfdFQ/iZe4qE3e.hl05gZOSza2S9uE9rw9r24xgTDsT37S', 'KGHXgAwIBQD0yPLgkwvJzUld7VEa2IBY518kPWeluSkul0ho5A8CdSVOdcpH', NULL, NULL, '{\"account_number\": \"5005016577\", \"account_name\": \"David James\", \"bank_key\": \"ecobank\"}', 'active', '2025-11-25 15:33:21', '2025-12-04 16:05:52'),
-(3, 'USR-6926BD95D6941', 'john daniel', 'john@gmail.com', 'john', 8053846274, 'blaady05', NULL, 'avatar.svg', 0, 200, 'user', NULL, '$2y$12$B/KWPtzeYFx.ej/5Q5qJDOKNrnkPK7Dv8mP/rAMKyymYetNePeftG', 'LSu1pepXTLbWBzOuLiv1ZGl2Fo3nRd1dDGSD8PuG6U8hOMkVDUd0G0qkhPMV', NULL, NULL, NULL, 'active', '2025-11-26 17:43:03', '2025-11-26 17:43:03'),
-(4, 'CVT6WRHZ4L34RBVH', '432', '5432@gmail.com', '5432', 6654, NULL, NULL, 'avatar.svg', 0, 200, 'user', NULL, '$2y$12$sc8CGGTl1irpubNZI4uhkeFF4K0TulWbTuWToLO6Cd0TQe7I7OwJa', NULL, NULL, NULL, NULL, 'active', '2025-12-04 19:16:17', '2025-12-04 19:16:17'),
-(5, 'TXOMPXJHK7BLWZAV', 'jhgfdsa', '7654321`@gmail.com', '7654321`', 8765432, NULL, NULL, 'avatar.svg', 0, 200, 'user', NULL, '$2y$12$QQJNj./de53T9JkI4kLDm.4sIfFOx29qCfjWabW0pms5sA3WBAMQ.', NULL, NULL, NULL, NULL, 'active', '2025-12-04 19:18:36', '2025-12-04 19:18:36'),
-(6, 'CSDFO4FZPGQWGMML', 'James David', 'dave@gmail.com', 'dave', 9137307993, NULL, NULL, 'avatar.svg', 0, 200, 'user', NULL, '$2y$12$KWbfGKdaGIROTrVVjONAKuKzIpwmuFps3AQGQZKGH/auFe.nUv.P6', 'Ewfxhy0dDT0iC6b0Qg1q73ItOlryekzRoYP9sREJF7Q1iUmkpIVWZUaJ6feJ', NULL, NULL, NULL, 'active', '2025-12-04 19:19:25', '2025-12-04 19:19:25'),
-(7, 'PDIS8CKG1CFIGMN9', 'wertyuiop', 'ertyuio;\'@gmail.com', 'ertyuio;\'', 34567890, 'dave', NULL, 'avatar.svg', 0, 200, 'user', NULL, '$2y$12$LUKb18U4efj5GXfQYZyem.XVikQk9FRhLTCnAEUw7iHeYPhQPM.w6', NULL, NULL, NULL, NULL, 'active', '2025-12-04 19:27:36', '2025-12-04 19:27:36');
+INSERT INTO `users` (`id`, `uniqid`, `name`, `email`, `username`, `mobile`, `ref`, `referral`, `photo`, `deposit`, `withdrawal`, `recipient`, `bank`, `type`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `json`, `status`, `date`, `updated`) VALUES
+(1, 'USR-69247CD7C4695', 'David', 'abakpadavid05@gmail.com', 'techie', NULL, NULL, NULL, 'avatar.svg', 0, 200, NULL, NULL, 'user', NULL, '$2y$12$qJfMJo.iuZv9sm.60.jD9O64bGX7NKo6Jfu6w6HIxaYM.KFDCZqf6', NULL, NULL, NULL, NULL, 'active', '2025-11-25 00:42:16', '2025-11-25 00:42:16'),
+(2, 'USR-69254DB0942F6', 'David James', 'techie5961@gmail.com', 'blaady05', 9013350351, NULL, NULL, 'avatar.jpg', 9100, 3450, '{\"status\":true,\"message\":\"Transfer recipient created successfully\",\"data\":{\"active\":true,\"createdAt\":\"2025-12-05T10:41:30.000Z\",\"currency\":\"NGN\",\"description\":null,\"domain\":\"live\",\"email\":null,\"id\":116909281,\"integration\":1659157,\"metadata\":null,\"name\":\"David James\",\"recipient_code\":\"RCP_lyoqz5iwzx34hn1\",\"type\":\"nuban\",\"updatedAt\":\"2025-12-05T14:38:08.000Z\",\"is_deleted\":false,\"isDeleted\":false,\"details\":{\"authorization_code\":null,\"account_number\":\"5005016577\",\"account_name\":\"DAVID JAMES ABAKPA\",\"bank_code\":\"068\",\"bank_name\":\"Standard Chartered Bank\"}}}', '{\"account_number\":\"5005016577\",\"account_name\":\"DAVID JAMES ABAKPA\",\"bank_id\":\"15\",\"bank_code\":\"068\",\"bank_name\":\"Standard Chartered Bank\"}', 'user', NULL, '$2y$12$lwx1dV6wfdFQ/iZe4qE3e.hl05gZOSza2S9uE9rw9r24xgTDsT37S', 'KGHXgAwIBQD0yPLgkwvJzUld7VEa2IBY518kPWeluSkul0ho5A8CdSVOdcpH', NULL, NULL, '{\"account_number\": \"5005016577\", \"account_name\": \"DAVID JAMES\", \"bank_key\": \"300\"}', 'active', '2025-11-25 15:33:21', '2025-12-06 04:53:13'),
+(3, 'USR-6926BD95D6941', 'john daniel', 'john@gmail.com', 'john', 8053846274, 'blaady05', NULL, 'avatar.svg', 0, 200, NULL, NULL, 'user', NULL, '$2y$12$B/KWPtzeYFx.ej/5Q5qJDOKNrnkPK7Dv8mP/rAMKyymYetNePeftG', 'LSu1pepXTLbWBzOuLiv1ZGl2Fo3nRd1dDGSD8PuG6U8hOMkVDUd0G0qkhPMV', NULL, NULL, NULL, 'active', '2025-11-26 17:43:03', '2025-11-26 17:43:03'),
+(4, 'CVT6WRHZ4L34RBVH', '432', '5432@gmail.com', '5432', 6654, NULL, NULL, 'avatar.svg', 0, 200, NULL, NULL, 'user', NULL, '$2y$12$sc8CGGTl1irpubNZI4uhkeFF4K0TulWbTuWToLO6Cd0TQe7I7OwJa', NULL, NULL, NULL, NULL, 'active', '2025-12-04 19:16:17', '2025-12-04 19:16:17'),
+(5, 'TXOMPXJHK7BLWZAV', 'jhgfdsa', '7654321`@gmail.com', '7654321`', 8765432, NULL, NULL, 'avatar.svg', 0, 200, NULL, NULL, 'user', NULL, '$2y$12$QQJNj./de53T9JkI4kLDm.4sIfFOx29qCfjWabW0pms5sA3WBAMQ.', NULL, NULL, NULL, NULL, 'active', '2025-12-04 19:18:36', '2025-12-04 19:18:36'),
+(6, 'CSDFO4FZPGQWGMML', 'James David', 'dave@gmail.com', 'dave', 9137307993, NULL, NULL, 'avatar.svg', 0, 200, NULL, NULL, 'user', NULL, '$2y$12$KWbfGKdaGIROTrVVjONAKuKzIpwmuFps3AQGQZKGH/auFe.nUv.P6', 'Ewfxhy0dDT0iC6b0Qg1q73ItOlryekzRoYP9sREJF7Q1iUmkpIVWZUaJ6feJ', NULL, NULL, NULL, 'active', '2025-12-04 19:19:25', '2025-12-04 19:19:25'),
+(7, 'PDIS8CKG1CFIGMN9', 'wertyuiop', 'ertyuio;\'@gmail.com', 'ertyuio;\'', 34567890, 'dave', NULL, 'avatar.svg', 0, 200, NULL, NULL, 'user', NULL, '$2y$12$LUKb18U4efj5GXfQYZyem.XVikQk9FRhLTCnAEUw7iHeYPhQPM.w6', NULL, NULL, NULL, NULL, 'active', '2025-12-04 19:27:36', '2025-12-04 19:27:36');
 
 --
 -- Indexes for dumped tables
@@ -543,7 +550,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -555,7 +562,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `purchased`
 --
 ALTER TABLE `purchased`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `settings`
@@ -567,7 +574,7 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `users`
